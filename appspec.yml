@@ -1,0 +1,20 @@
+version: 0.0 
+os: linux
+
+files:  
+  - source: /
+    destination: /var/www/backend
+
+hooks:
+  ApplicationStop:
+    - location: serverConfig/scripts/application_stop.sh
+      timeout: 150
+      runas: ubuntu
+  AfterInstall: 
+    - location: serverConfig/scripts/after_install.sh
+      timeout: 250 
+      runas: ubuntu
+  ApplicationStart:
+    - location: serverConfig/scripts/application_start.sh
+      timeout: 200
+      runas: ubuntu

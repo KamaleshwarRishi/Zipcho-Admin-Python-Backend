@@ -1,0 +1,3797 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "ZIPCHO DEV APIS",
+        "version": "1.0.0",
+        "description": "Zipcho"
+    },
+    "paths": {
+        "/authentication/contactUs": {
+            "post": {
+                "operationId": "authentication_contactUs_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contactUsRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contactUsRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contactUsRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/contactUsResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/fcmRegister": {
+            "post": {
+                "operationId": "authentication_fcmRegister_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/fcmRegisterDeviceRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/fcmRegisterDeviceRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/fcmRegisterDeviceRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/fcmRegisterDeviceResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/getProfile": {
+            "get": {
+                "operationId": "authentication_getProfile_retrieve",
+                "tags": [
+                    "authentication"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getProfileResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnauthorizedResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/getUserCategory": {
+            "get": {
+                "operationId": "authentication_getUserCategory_retrieve",
+                "tags": [
+                    "authentication"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getUserCategoryResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/getUserCountry": {
+            "get": {
+                "operationId": "authentication_getUserCountry_retrieve",
+                "tags": [
+                    "authentication"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    },
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/countryResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/getUserGender": {
+            "get": {
+                "operationId": "authentication_getUserGender_retrieve",
+                "tags": [
+                    "authentication"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    },
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/genderReponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/getUserInterests": {
+            "get": {
+                "operationId": "authentication_getUserInterests_retrieve",
+                "tags": [
+                    "authentication"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getUserInterestResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/getUserTalent": {
+            "get": {
+                "operationId": "authentication_getUserTalent_retrieve",
+                "tags": [
+                    "authentication"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getUserTalentResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/getUserlanguages": {
+            "get": {
+                "operationId": "authentication_getUserlanguages_retrieve",
+                "tags": [
+                    "authentication"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getUserlanguageResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/help": {
+            "get": {
+                "operationId": "authentication_help_retrieve",
+                "tags": [
+                    "authentication"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    },
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/helpResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/languagePreferences": {
+            "post": {
+                "operationId": "authentication_languagePreferences_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/langPrefRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/langPrefRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/langPrefRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/langPrefResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/login": {
+            "post": {
+                "operationId": "authentication_login_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/loginEmailPwdRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/loginEmailPwdRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/loginEmailPwdRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/loginResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/loginWithOTP": {
+            "post": {
+                "operationId": "authentication_loginWithOTP_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/loginWithOTPRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/loginWithOTPRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/loginWithOTPRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/loginWithOTPResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/profilePicUpdate": {
+            "put": {
+                "operationId": "authentication_profilePicUpdate_update",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/profilePic"
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/profilePicResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/resetPassword": {
+            "post": {
+                "operationId": "authentication_resetPassword_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/resetPasswordRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/resetPasswordRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/resetPasswordRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/resetPasswordResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/signup": {
+            "post": {
+                "operationId": "authentication_signup_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/sigupRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/sigupRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/sigupRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/signupResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/updateProfile": {
+            "post": {
+                "operationId": "authentication_updateProfile_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/updateProfileRequest"
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/updateProfileResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/userCategory": {
+            "post": {
+                "operationId": "authentication_userCategory_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userCategoryRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userCategoryRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userCategoryRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userCategoryResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/userInterests": {
+            "post": {
+                "operationId": "authentication_userInterests_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userInterestRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userInterestRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userInterestRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userInterestResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/userTalent": {
+            "post": {
+                "operationId": "authentication_userTalent_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userTalentRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userTalentRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userTalentRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userTalentResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/validateEmail": {
+            "post": {
+                "operationId": "authentication_validateEmail_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validateEmailRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validateEmailRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validateEmailRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validateEmailResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/validateUsername": {
+            "post": {
+                "operationId": "authentication_validateUsername_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validateUsernameRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validateUsernameRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validateUsernameRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validateUsernameResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/authentication/verifyOTP": {
+            "post": {
+                "operationId": "authentication_verifyOTP_create",
+                "tags": [
+                    "authentication"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/verifyOTPRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/verifyOTPRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/verifyOTPRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/verifyOTPResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/portfolio/dashboard": {
+            "post": {
+                "operationId": "portfolio_dashboard_create",
+                "tags": [
+                    "portfolio"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/dashboardRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/dashboardRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/dashboardRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/dashboardResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponsePortfolio"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/portfolio/deletePost/{post_id}": {
+            "delete": {
+                "operationId": "portfolio_deletePost_destroy",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "post_id",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }
+                ],
+                "tags": [
+                    "portfolio"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/deletePostResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponsePortfolio"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/portfolio/getAllUserPosts": {
+            "post": {
+                "operationId": "portfolio_getAllUserPosts_create",
+                "tags": [
+                    "portfolio"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/getAllUserPostsRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/getAllUserPostsRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/getAllUserPostsRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getAllUserPostResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponsePortfolio"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/portfolio/getMyWorks": {
+            "post": {
+                "operationId": "portfolio_getMyWorks_create",
+                "tags": [
+                    "portfolio"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/getMyWorksRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/getMyWorksRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/getMyWorksRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getAllMyWorksResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponsePortfolio"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/portfolio/updatePost": {
+            "post": {
+                "operationId": "portfolio_updatePost_create",
+                "tags": [
+                    "portfolio"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/updatePostRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/updatePostRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/updatePostRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/updatePostResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponsePortfolio"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/portfolio/userPosts": {
+            "post": {
+                "operationId": "portfolio_userPosts_create",
+                "tags": [
+                    "portfolio"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userPostRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userPostRequest"
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userPostRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userPostResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponsePortfolio"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/zipchoAdmin/getAllCategories": {
+            "get": {
+                "operationId": "zipchoAdmin_getAllCategories_retrieve",
+                "tags": [
+                    "zipchoAdmin"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    },
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/categoryReponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/zipchoAdminError"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/zipchoAdmin/getAllCountries": {
+            "get": {
+                "operationId": "zipchoAdmin_getAllCountries_retrieve",
+                "tags": [
+                    "zipchoAdmin"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    },
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/countryResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/zipchoAdminError"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/zipchoAdmin/getAllGender": {
+            "get": {
+                "operationId": "zipchoAdmin_getAllGender_retrieve",
+                "tags": [
+                    "zipchoAdmin"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    },
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/genderReponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/zipchoAdminError"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/zipchoAdmin/getAllInterests": {
+            "get": {
+                "operationId": "zipchoAdmin_getAllInterests_retrieve",
+                "tags": [
+                    "zipchoAdmin"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    },
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/interestReponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/zipchoAdminError"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/zipchoAdmin/getAllLanguages": {
+            "get": {
+                "operationId": "zipchoAdmin_getAllLanguages_retrieve",
+                "tags": [
+                    "zipchoAdmin"
+                ],
+                "security": [
+                    {
+                        "jwtAuth": []
+                    },
+                    {
+                        "cookieAuth": []
+                    },
+                    {
+                        "basicAuth": []
+                    },
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/languagesReponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/zipchoAdminError"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ErrorResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "ErrorResponsePortfolio": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "UnauthorizedResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "messsage": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "messsage",
+                    "status"
+                ]
+            },
+            "categoryData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "interest": {
+                        "type": "integer"
+                    },
+                    "category": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "category",
+                    "id",
+                    "interest"
+                ]
+            },
+            "categoryReponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/categoryData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "contactUsRequest": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "email": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 300
+                    }
+                },
+                "required": [
+                    "email",
+                    "message",
+                    "username"
+                ]
+            },
+            "contactUsResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "countryData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "country": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "country",
+                    "id"
+                ]
+            },
+            "countryResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/countryData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "dashboardData": {
+                "type": "object",
+                "properties": {
+                    "profileImage": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "userId": {
+                        "type": "integer"
+                    },
+                    "username": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "fullname": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "bio": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "posts": {
+                        "type": "integer"
+                    },
+                    "followers": {
+                        "type": "integer"
+                    },
+                    "following": {
+                        "type": "integer"
+                    },
+                    "isConnected": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "bio",
+                    "followers",
+                    "following",
+                    "fullname",
+                    "isConnected",
+                    "posts",
+                    "profileImage",
+                    "userId",
+                    "username"
+                ]
+            },
+            "dashboardRequest": {
+                "type": "object",
+                "properties": {
+                    "viewerId": {
+                        "type": "string",
+                        "maxLength": 200
+                    }
+                },
+                "required": [
+                    "viewerId"
+                ]
+            },
+            "dashboardResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/dashboardData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "deletePostResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "fcmRegisterDeviceRequest": {
+                "type": "object",
+                "properties": {
+                    "registration_id": {
+                        "type": "string",
+                        "maxLength": 150
+                    }
+                },
+                "required": [
+                    "registration_id"
+                ]
+            },
+            "fcmRegisterDeviceResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "fetchCommentData": {
+                "type": "object",
+                "properties": {
+                    "comment": {
+                        "type": "string",
+                        "maxLength": 150
+                    },
+                    "likes": {
+                        "type": "integer"
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "post_id": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "comment_id": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "userId": {
+                        "type": "integer"
+                    },
+                    "username": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "profileImage": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "replies": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/repliesData"
+                        }
+                    }
+                },
+                "required": [
+                    "comment",
+                    "comment_id",
+                    "date",
+                    "likes",
+                    "post_id",
+                    "profileImage",
+                    "replies",
+                    "userId",
+                    "username"
+                ]
+            },
+            "genderData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "gender": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "gender",
+                    "id"
+                ]
+            },
+            "genderReponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/genderData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "getAllMyWorksData": {
+                "type": "object",
+                "properties": {
+                    "interestId": {
+                        "type": "integer"
+                    },
+                    "interestName": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "categoryId": {
+                        "type": "integer"
+                    },
+                    "categoryName": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "posts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/postData"
+                        }
+                    }
+                },
+                "required": [
+                    "categoryId",
+                    "categoryName",
+                    "interestId",
+                    "interestName",
+                    "posts"
+                ]
+            },
+            "getAllMyWorksResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/getAllMyWorksData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "getAllUserData": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "title": " id",
+                        "maxLength": 50
+                    },
+                    "createdById": {
+                        "type": "integer"
+                    },
+                    "createdByUsername": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "profileImage": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "loginUser": {
+                        "type": "integer"
+                    },
+                    "type": {
+                        "type": "integer"
+                    },
+                    "likedBy": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/usersData"
+                        }
+                    },
+                    "likes": {
+                        "type": "integer"
+                    },
+                    "isLiked": {
+                        "type": "integer"
+                    },
+                    "comments": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/fetchCommentData"
+                        }
+                    },
+                    "totalComments": {
+                        "type": "integer"
+                    },
+                    "caption": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "visibility": {
+                        "type": "string",
+                        "maxLength": 30
+                    },
+                    "taggedUser": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/userData"
+                        }
+                    },
+                    "hashtags": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "mediaUrl": {
+                        "type": "string",
+                        "maxLength": 500
+                    },
+                    "key": {
+                        "type": "string",
+                        "maxLength": 500
+                    },
+                    "latitude": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "longitude": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "address": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "_id",
+                    "address",
+                    "caption",
+                    "comments",
+                    "createdById",
+                    "createdByUsername",
+                    "date",
+                    "hashtags",
+                    "isLiked",
+                    "key",
+                    "latitude",
+                    "likedBy",
+                    "likes",
+                    "loginUser",
+                    "longitude",
+                    "mediaUrl",
+                    "profileImage",
+                    "taggedUser",
+                    "totalComments",
+                    "type",
+                    "visibility"
+                ]
+            },
+            "getAllUserPostResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/getAllUserData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "getAllUserPostsRequest": {
+                "type": "object",
+                "properties": {
+                    "viewerId": {
+                        "type": "string",
+                        "maxLength": 200
+                    }
+                },
+                "required": [
+                    "viewerId"
+                ]
+            },
+            "getMyWorksRequest": {
+                "type": "object",
+                "properties": {
+                    "viewerId": {
+                        "type": "string",
+                        "maxLength": 200
+                    }
+                },
+                "required": [
+                    "viewerId"
+                ]
+            },
+            "getProfileData": {
+                "type": "object",
+                "properties": {
+                    "profileImage": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "userId": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "firstName": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "username": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "bio": {
+                        "type": "string",
+                        "maxLength": 250
+                    },
+                    "email": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "mobileNumber": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "gender": {
+                        "$ref": "#/components/schemas/userGenderData"
+                    },
+                    "country": {
+                        "$ref": "#/components/schemas/userCountryData"
+                    }
+                },
+                "required": [
+                    "bio",
+                    "country",
+                    "email",
+                    "firstName",
+                    "gender",
+                    "lastName",
+                    "mobileNumber",
+                    "profileImage",
+                    "userId",
+                    "username"
+                ]
+            },
+            "getProfileResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/getProfileData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "getUserCategoryData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "category": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "isSelected": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "category",
+                    "id",
+                    "isSelected"
+                ]
+            },
+            "getUserCategoryResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/getUserCategoryData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "getUserInterestData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "interest": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "isSelected": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "id",
+                    "interest",
+                    "isSelected"
+                ]
+            },
+            "getUserInterestResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/getUserInterestData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "getUserLanguageData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "language": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "isSelected": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "id",
+                    "isSelected",
+                    "language"
+                ]
+            },
+            "getUserTalentData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "talents": {
+                        "type": "string",
+                        "maxLength": 150
+                    },
+                    "tag": {
+                        "type": "string",
+                        "maxLength": 150
+                    },
+                    "isSelected": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "id",
+                    "isSelected",
+                    "tag",
+                    "talents"
+                ]
+            },
+            "getUserTalentResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/getUserTalentData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "getUserlanguageResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/getUserLanguageData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "helpData": {
+                "type": "object",
+                "properties": {
+                    "question": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "answer": {
+                        "type": "string",
+                        "maxLength": 500
+                    }
+                },
+                "required": [
+                    "answer",
+                    "question"
+                ]
+            },
+            "helpResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/helpData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "interestData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "interest": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "id",
+                    "interest"
+                ]
+            },
+            "interestReponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/interestData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "langPrefRequest": {
+                "type": "object",
+                "properties": {
+                    "ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "maximum": 10000,
+                            "minimum": 0
+                        }
+                    }
+                },
+                "required": [
+                    "ids"
+                ]
+            },
+            "langPrefResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "message",
+                    "status"
+                ]
+            },
+            "languageData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "language": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "id",
+                    "language"
+                ]
+            },
+            "languagesReponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/languageData"
+                        }
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "loginData": {
+                "type": "object",
+                "properties": {
+                    "refresh": {
+                        "type": "string",
+                        "maxLength": 250
+                    },
+                    "access": {
+                        "type": "string",
+                        "maxLength": 250
+                    },
+                    "otp": {
+                        "type": "integer"
+                    },
+                    "email": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "mobileNumber": {
+                        "type": "string",
+                        "maxLength": 15
+                    },
+                    "mobileNumberVerified": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "access",
+                    "email",
+                    "mobileNumber",
+                    "mobileNumberVerified",
+                    "otp",
+                    "refresh"
+                ]
+            },
+            "loginEmailPwdRequest": {
+                "type": "object",
+                "properties": {
+                    "emailMobile": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "password": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "emailMobile",
+                    "password"
+                ]
+            },
+            "loginResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/loginData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "loginWithOTPData": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "mobileNumber": {
+                        "type": "string",
+                        "maxLength": 15
+                    },
+                    "mobileNumberVerified": {
+                        "type": "boolean"
+                    },
+                    "otp": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "email",
+                    "mobileNumber",
+                    "mobileNumberVerified",
+                    "otp"
+                ]
+            },
+            "loginWithOTPRequest": {
+                "type": "object",
+                "properties": {
+                    "mobileNumber": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "mobileNumber"
+                ]
+            },
+            "loginWithOTPResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/loginWithOTPData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "postData": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "title": " id",
+                        "maxLength": 50
+                    },
+                    "type": {
+                        "type": "integer"
+                    },
+                    "createdById": {
+                        "type": "integer"
+                    },
+                    "createdByUsername": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "profileImage": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "loginUser": {
+                        "type": "integer"
+                    },
+                    "likedBy": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/usersData"
+                        }
+                    },
+                    "likes": {
+                        "type": "integer"
+                    },
+                    "isLiked": {
+                        "type": "integer"
+                    },
+                    "comments": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/fetchCommentData"
+                        }
+                    },
+                    "totalComments": {
+                        "type": "integer"
+                    },
+                    "caption": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "visibility": {
+                        "type": "string",
+                        "maxLength": 30
+                    },
+                    "taggedUser": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/userData"
+                        }
+                    },
+                    "hashtags": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "mediaUrl": {
+                        "type": "string",
+                        "maxLength": 500
+                    },
+                    "key": {
+                        "type": "string",
+                        "maxLength": 500
+                    },
+                    "latitude": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "longitude": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "address": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "isBoomarked": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "_id",
+                    "address",
+                    "caption",
+                    "comments",
+                    "createdById",
+                    "createdByUsername",
+                    "date",
+                    "hashtags",
+                    "isBoomarked",
+                    "isLiked",
+                    "key",
+                    "latitude",
+                    "likedBy",
+                    "likes",
+                    "loginUser",
+                    "longitude",
+                    "mediaUrl",
+                    "profileImage",
+                    "taggedUser",
+                    "totalComments",
+                    "type",
+                    "visibility"
+                ]
+            },
+            "profilePic": {
+                "type": "object",
+                "properties": {
+                    "profileImage": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            },
+            "profilePicData": {
+                "type": "object",
+                "properties": {
+                    "profileImage": {
+                        "type": "string",
+                        "maxLength": 250
+                    }
+                },
+                "required": [
+                    "profileImage"
+                ]
+            },
+            "profilePicResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/profilePicData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "repliesData": {
+                "type": "object",
+                "properties": {
+                    "comment": {
+                        "type": "string",
+                        "maxLength": 150
+                    },
+                    "likes": {
+                        "type": "integer"
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "userId": {
+                        "type": "integer"
+                    },
+                    "userName": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "profileImage": {
+                        "type": "string",
+                        "maxLength": 300
+                    }
+                },
+                "required": [
+                    "comment",
+                    "date",
+                    "likes",
+                    "profileImage",
+                    "userId",
+                    "userName"
+                ]
+            },
+            "resetPasswordRequest": {
+                "type": "object",
+                "properties": {
+                    "password": {
+                        "type": "string",
+                        "maxLength": 250
+                    },
+                    "confirmPassword": {
+                        "type": "string",
+                        "maxLength": 250
+                    }
+                },
+                "required": [
+                    "confirmPassword",
+                    "password"
+                ]
+            },
+            "resetPasswordResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "message",
+                    "status"
+                ]
+            },
+            "signUpData": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "mobileNumber": {
+                        "type": "string",
+                        "maxLength": 15
+                    },
+                    "otp": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "email",
+                    "mobileNumber",
+                    "otp"
+                ]
+            },
+            "signupResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/signUpData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "sigupRequest": {
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "type": "string",
+                        "maxLength": 30
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "maxLength": 30
+                    },
+                    "mobileNumber": {
+                        "type": "string",
+                        "maxLength": 15
+                    },
+                    "email": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "role": {
+                        "type": "string",
+                        "maxLength": 5
+                    },
+                    "password": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "confirm_password": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "termsAgreed": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "confirm_password",
+                    "email",
+                    "firstName",
+                    "lastName",
+                    "password",
+                    "role",
+                    "termsAgreed"
+                ]
+            },
+            "updatePostRequest": {
+                "type": "object",
+                "properties": {
+                    "post_id": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "caption": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "visibility": {
+                        "type": "string",
+                        "maxLength": 30
+                    },
+                    "taggedUser": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/userData"
+                        }
+                    },
+                    "hashtags": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "latitude": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "longitude": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "address": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "categoryId": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "address",
+                    "caption",
+                    "categoryId",
+                    "hashtags",
+                    "latitude",
+                    "longitude",
+                    "post_id",
+                    "taggedUser",
+                    "visibility"
+                ]
+            },
+            "updatePostResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "updateProfileRequest": {
+                "type": "object",
+                "properties": {
+                    "profileImage": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "firstName": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "username": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "bio": {
+                        "type": "string",
+                        "maxLength": 250
+                    },
+                    "email": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "mobileNumber": {
+                        "type": "string",
+                        "maxLength": 15
+                    },
+                    "gender": {
+                        "type": "integer"
+                    },
+                    "country": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "updateProfileResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "message",
+                    "status"
+                ]
+            },
+            "userCategoryRequest": {
+                "type": "object",
+                "properties": {
+                    "ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "maximum": 10000,
+                            "minimum": 0
+                        }
+                    }
+                },
+                "required": [
+                    "ids"
+                ]
+            },
+            "userCategoryResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "message",
+                    "status"
+                ]
+            },
+            "userCountryData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "country": {
+                        "type": "string",
+                        "maxLength": 25
+                    }
+                },
+                "required": [
+                    "country",
+                    "id"
+                ]
+            },
+            "userData": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "userId"
+                ]
+            },
+            "userGenderData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "gender": {
+                        "type": "string",
+                        "maxLength": 15
+                    }
+                },
+                "required": [
+                    "gender",
+                    "id"
+                ]
+            },
+            "userInterestRequest": {
+                "type": "object",
+                "properties": {
+                    "ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "maximum": 10000,
+                            "minimum": 0
+                        }
+                    }
+                },
+                "required": [
+                    "ids"
+                ]
+            },
+            "userInterestResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "message",
+                    "status"
+                ]
+            },
+            "userPostRequest": {
+                "type": "object",
+                "properties": {
+                    "caption": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "visibility": {
+                        "type": "string",
+                        "maxLength": 30
+                    },
+                    "taggedUser": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/userData"
+                        }
+                    },
+                    "hashtags": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "mediaUrl": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "key": {
+                        "type": "string",
+                        "maxLength": 300
+                    },
+                    "latitude": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "longitude": {
+                        "type": "string",
+                        "maxLength": 100
+                    },
+                    "address": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "categoryId": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "address",
+                    "caption",
+                    "categoryId",
+                    "hashtags",
+                    "key",
+                    "latitude",
+                    "longitude",
+                    "mediaUrl",
+                    "taggedUser",
+                    "visibility"
+                ]
+            },
+            "userPostResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "userTalentRequest": {
+                "type": "object",
+                "properties": {
+                    "interest": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "maximum": 10000,
+                            "minimum": 0
+                        }
+                    },
+                    "category": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "maximum": 10000,
+                            "minimum": 0
+                        }
+                    }
+                },
+                "required": [
+                    "category",
+                    "interest"
+                ]
+            },
+            "userTalentResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "message",
+                    "status"
+                ]
+            },
+            "usersData": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "username": {
+                        "type": "string",
+                        "maxLength": 100
+                    }
+                },
+                "required": [
+                    "userId",
+                    "username"
+                ]
+            },
+            "validateEmailRequest": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "email"
+                ]
+            },
+            "validateEmailResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "message",
+                    "status"
+                ]
+            },
+            "validateUsernameRequest": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "username"
+                ]
+            },
+            "validateUsernameResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "required": [
+                    "message",
+                    "status"
+                ]
+            },
+            "verifyOTPData": {
+                "type": "object",
+                "properties": {
+                    "refresh": {
+                        "type": "string",
+                        "maxLength": 250
+                    },
+                    "access": {
+                        "type": "string",
+                        "maxLength": 250
+                    }
+                },
+                "required": [
+                    "access",
+                    "refresh"
+                ]
+            },
+            "verifyOTPRequest": {
+                "type": "object",
+                "properties": {
+                    "otp": {
+                        "type": "integer"
+                    },
+                    "email": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "mobileNumber": {
+                        "type": "string",
+                        "maxLength": 15
+                    }
+                },
+                "required": [
+                    "email",
+                    "mobileNumber",
+                    "otp"
+                ]
+            },
+            "verifyOTPResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/verifyOTPData"
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            },
+            "zipchoAdminError": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "maxLength": 50
+                    },
+                    "status": {
+                        "type": "integer"
+                    },
+                    "data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "required": [
+                    "data",
+                    "message",
+                    "status"
+                ]
+            }
+        },
+        "securitySchemes": {
+            "basicAuth": {
+                "type": "http",
+                "scheme": "basic"
+            },
+            "cookieAuth": {
+                "type": "apiKey",
+                "in": "cookie",
+                "name": "sessionid"
+            },
+            "jwtAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    }
+}
