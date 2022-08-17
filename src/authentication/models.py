@@ -55,19 +55,3 @@ def create_user_profile(sender, instance ,created, **kwargs):
         print(f"Creating an empty profile for user ... {instance}")
         profile.objects.create(user=instance)
 
-class languagePreference(models.Model):
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
-    language = models.ForeignKey(language, on_delete=models.PROTECT)
-    
-class userInterest(models.Model):
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
-    interest = models.ForeignKey(interest, on_delete=models.PROTECT)
-
-class userCategory(models.Model):
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
-    category = models.ForeignKey(category, on_delete=models.PROTECT)
-
-class userTalent(models.Model):
-    typeOfTalent = models.CharField(max_length=250,null=False)
-    talent_id = models.IntegerField()
-    user = models.ForeignKey(User, on_delete=models.PROTECT)

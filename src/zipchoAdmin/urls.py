@@ -7,5 +7,6 @@ urlpatterns = [
     path("getAllInterests", getAllInterests, name= "getAllInterests"),
     path("getAllGender", getAllGender, name= "getAllGender"),
     path("getAllCategories", getAllCategories, name= "getAllCategories"),
-    path("getAllCountries", getAllCountries, name= "getAllCountries")
+    path("getAllCountries", getAllCountries, name= "getAllCountries"),
+    path ("getAllUser", getAllUser, name="getAllUser")
 ]

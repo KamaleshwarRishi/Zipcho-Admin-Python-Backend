@@ -27,11 +27,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'authentication',
     'zipchoAdmin',
-    'post',
-    'core',
-    'push_notifications',
-    'notificationService',
-    'searchService'
+    'core'
+
 ]
 
 MIDDLEWARE = [
@@ -85,6 +82,7 @@ VENV_PATH = os.path.dirname(BASE_DIR)
 STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 MEDIAL_URL ='/media/'
 MEDIA_ROOT = os.path.join(VENV_PATH, 'media')
+
 
 
 # Configure the JWT settings
@@ -162,7 +160,7 @@ AWS_DEFAULT_ACL=None
 
 
 SPECTACULAR_SETTINGS = {
-    'TITLE' : 'ZIPCHO CHAT APIS',
+    'TITLE' : 'ZIPCHO ADMIN PORTAL APIS',
     'DESCRIPTION': 'Zipcho Chat',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,

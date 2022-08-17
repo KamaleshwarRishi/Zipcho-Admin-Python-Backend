@@ -1,5 +1,7 @@
+from email import message
 from django.http import HttpResponse
 from django.shortcuts import render
+from authentication.models import User
 from drf_spectacular.utils import extend_schema
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.decorators import api_view, permission_classes
@@ -8,7 +10,7 @@ from rest_framework.response import Response
 
 from .models import category, country, gender, interest, language
 from .zipchoReponse import (ErrorResponse, categoryReponse, countryResponse,
-                            genderReponse, interestReponse, languagesReponse)
+                            genderReponse, interestReponse, languagesReponse,getAllUserResponse)
 
 
 @api_view(['GET'])
@@ -96,3 +98,27 @@ def getAllCountries(request):
         print(e)
         message = "Failed while fetching Country "
         return Response({"status": 400,"message": message, "data": None})
+
+
+# get all user list 
+
+@extend_schema(methods=['get'], responses={200: getAllUserResponse, 400: ErrorResponse})
+@api_view(['GET'])
+@permission_classes([])
+def getAllUser(request):
+    try:
+        print(" At getAllUser")
+
+        userData=list(User.objects.all().values('id','username'))
+        print(userData)
+        return Response ({"status": 200,
+                          "message":"success",
+                          "data":userData})
+
+    except Exception as e:
+        print(e)
+        message = "Failed to fetch all userList"
+        return Response({"status": 400,
+        "message": message,
+        "data": None})
+

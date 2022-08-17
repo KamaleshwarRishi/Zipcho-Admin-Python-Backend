@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home', home, name='home'),
     path('authentication/', include('authentication.urls')),
-    path('portfolio/', include('post.urls')),
+    # path('portfolio/', include('post.urls')),
     #path('notification/', include('notificationService.urls')),
     #path('search/', include('searchService.urls')),
     path('zipchoAdmin/', include('zipchoAdmin.urls')),

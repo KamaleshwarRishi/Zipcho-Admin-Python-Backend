@@ -9,7 +9,6 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from drf_spectacular.utils import extend_schema
 from drf_yasg.utils import swagger_auto_schema
-from push_notifications.models import GCMDevice
 from rest_framework import generics
 from rest_framework.decorators import (api_view, parser_classes,
                                        permission_classes)

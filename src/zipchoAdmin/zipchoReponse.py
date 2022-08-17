@@ -53,3 +53,9 @@ class ErrorResponse(serializers.Serializer):
 
     class Meta : 
         ref_name = "zipchoAdminError"
+
+# get all user response 
+class getAllUserResponse(serializers.Serializer):
+    message=serializers.CharField(max_length=50)
+    status=serializers.IntegerField()
+    data=serializers.ListField()
