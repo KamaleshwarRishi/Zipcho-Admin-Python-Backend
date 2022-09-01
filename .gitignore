@@ -1,4 +1,4 @@
-env
+adminEnv
 # Django #
 *.log
 *.pot
