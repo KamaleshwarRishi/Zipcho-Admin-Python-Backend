@@ -30,7 +30,7 @@ jobs:
   continuous-deployment:
     runs-on: ubuntu-latest
     needs: [continuous-integratrion]
-    if: github.ref == 'ref/heads/develop'
+    if: github.ref == 'refs/heads/develop'
     steps:
 
       # Step 1
@@ -48,4 +48,4 @@ jobs:
          --application-name zipchoAdminCodeDeploy \
          --deployment-group-name zipchoAdminDeploymentGroup \
          --deployment-config-name CodeDeploydefault.OneAtATime \
-         --github-looation repository=${{ github.repository  }},commitId=${{ github.sha }}
+         --github-location repository=${{ github.repository  }},commitId=${{ github.sha }}
